@@ -1,2 +1,2 @@
-# tesla-awsome
-Interactive animation with pixi.js
+# tesla-awesome
+Interactive tesla animation with pixi.js and spine
