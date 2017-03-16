@@ -48,10 +48,3 @@ Temporary Items
 .apdisk
 
 .DS_Store
-.gitignore
-.idea/modules.xml
-.idea/tesla-awsome.iml
-.idea/workspace.xml
-assets/
-index.html
-js/

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tesla awesome</title>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/pixi.min.js"></script>
+        <script src="js/pixi.spine.js"></script>
+        <script src="js/core.js"></script>
+        <script src="js/tesla.js"></script>
+        <script type="text/javascript">
+        $(function(){
+            TA.assetsUrl = 'assets';
+            // TA.TeslaAwesome.debug = false;
+            TA.TeslaAwesome
+                .addAssets([
+                    {name: 'background', url: TA.assetsUrl + '/bg.jpg'},
+                    {name: 'particle', url: TA.assetsUrl + '/particle.png'},
+                    {name: 'magic', url: TA.assetsUrl + '/magic_particle.png'},
+                    {name: 'tesla', url: TA.assetsUrl + '/tesla.json'},
+                    // preload tesla sprites
+                    TA.assetsUrl + '/tesla.png',
+                    TA.assetsUrl + '/tesla2.png',
+                    TA.assetsUrl + '/tesla3.png',
+                    TA.assetsUrl + '/tesla4.png',
+                    TA.assetsUrl + '/tesla5.png',
+                    TA.assetsUrl + '/tesla6.png'
+                ])
+                .initStats(TA.assetsUrl+'js/stats.min.js')
+                .init({
+                    container: '#interactive'
+                })
+                .run()
+            ;
+        });
+        </script>
+    </head>
+    <body>
+        <div id="interactive"></div>
+    </body>
+</html>
