@@ -16,52 +16,53 @@
         debug: false,
         width: 1920,
         height: 1080,
-        assets: [],
-        opts: {
-            topOffsetRate: 0.1428,
-            preloaderSpeed: 1.1,
-            preloaderTextStyle: {
-                font: '24px Halvetica',
-                fill: '#d8e2ff',
-                width: 100
+        assets: []
+    };
+
+    base.opts = {
+        topOffsetRate: 0.1428,
+        preloaderSpeed: 1.1,
+        preloaderTextStyle: {
+            font: '24px Halvetica',
+            fill: '#d8e2ff',
+            width: 100
+        },
+        dustAlphaSpeed: 0.005,
+        dust: {
+            spriteFunction: function () {
+                //noinspection JSUnresolvedVariable
+                return new PIXI.Sprite(base.loader.resources.particle.texture);
             },
-            dustAlphaSpeed: 0.005,
-            dust: {
-                spriteFunction: function () {
-                    //noinspection JSUnresolvedVariable
-                    return new PIXI.Sprite(base.loader.resources.particle.texture);
-                },
-                count: 130,
-                minSize: 1.5,
-                maxSize: 6,
-                minAlpha: 0.1,
-                maxAlpha: 0.5,
-                minAlphaSpeed: 0.0001,
-                maxAlphaSpeed: 0.002,
-                mouseReact: -10.7,
-                x: base.width / 4,
-                width: base.width / 2,
-                height: base.height / 2
+            count: 130,
+            minSize: 1.5,
+            maxSize: 6,
+            minAlpha: 0.1,
+            maxAlpha: 0.5,
+            minAlphaSpeed: 0.0001,
+            maxAlphaSpeed: 0.002,
+            mouseReact: -10.7,
+            x: base.width / 4,
+            width: base.width / 2,
+            height: base.height / 2
+        },
+        magicAlphaSpeed: 0.005,
+        magic: {
+            spriteFunction: function () {
+                return new PIXI.Sprite(base.loader.resources.magic.texture);
             },
-            magicAlphaSpeed: 0.005,
-            magic: {
-                spriteFunction: function () {
-                    return new PIXI.Sprite(base.loader.resources.magic.texture);
-                },
-                count: 80,
-                minSize: 1.2,
-                maxSize: 3.8,
-                minAlpha: 0,
-                maxAlpha: 0.3,
-                minAlphaSpeed: 0.001,
-                maxAlphaSpeed: 0.04,
-                x: base.width / 2 - 150,
-                y: base.height / 2 + 170,
-                width: 400,
-                height: 250
-            },
-            teslaAlphaSpeed: 0.04
-        }
+            count: 80,
+            minSize: 1.2,
+            maxSize: 3.8,
+            minAlpha: 0,
+            maxAlpha: 0.3,
+            minAlphaSpeed: 0.001,
+            maxAlphaSpeed: 0.04,
+            x: base.width / 2 - 150,
+            y: base.height / 2 + 170,
+            width: 400,
+            height: 250
+        },
+        teslaAlphaSpeed: 0.04
     };
 
     /**
